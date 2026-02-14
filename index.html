@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <header class="container">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- About -->
+    <section id="about">
+  <h1>About Me</h1>
+
+  <div class="about-layout">
+    <div class="about-left">
+      <div class="profile-image">
+        <img src="./assets/images/octupus.png" alt="Profile image" />
+      </div>
+
+      <p class="tagline">
+        <strong>“Knowledge is like cheese, there's no such thing as too much cheese.”</strong>
+      </p>
+    </div>
+
+    <div class="about-right">
+      <p>
+        Hallo zusammen! My name is Loay Shqair. In addition to being a fan of olives, I also happen to be double majoring in electrical engineering and computer science. I welcome all opportunities that allow me utilize the knowledge I gain in both disciplines in creative, innovative ways.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="projects-grid">
+
+        <article class="project-card">
+                      <a href="https://github.com/LostPositron/251-COE301.git"><h3>RISC Processor Design</h3></a>
+          <img src="assets/images/processor.png" alt="Processor Design in Logisim Image" />
+          <p>
+           The project involved implementing a RISC processor given some instruction set. Both a single-cycle design and a pipelined design were implemented. The project was completed using Logisim.
+          </p>
+        </article>
+
+        <article class="project-card">
+                      <a href="https://github.com/LostPositron/242-ICS202.git"><h3>Path-Finding Agent</h3></a>
+          <img src="./assets/images/search.png" alt="Path-Finding program Output Image" />
+          <p>
+            In this project, my goal was to create a program that found the shortest safe path for an agent to follow to reach a treasure in a maze. Programmatic representations for relevant entities were created, a graph state-space representation was initialized, and multiple search algorithms were run and their performances compared. The project was completed using Java.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Send</button>
+      </form>
+
+      <p id="form-status"></p>
+    </section>
+
+  </main>
+
+  <!-- External JS (optional later) -->
+  <script src="js/script.js"></script>
+</body>
+</html>
