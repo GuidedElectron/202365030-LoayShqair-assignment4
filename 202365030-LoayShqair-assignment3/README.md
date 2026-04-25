@@ -1,0 +1,122 @@
+# Assignment 4 Portfolio Website
+
+## Project Description
+This project is an upgraded version of my Assignment 3 portfolio website for SWE 363 Web Engineering. The goal of the upgrade was to move beyond a static portfolio and implement advanced front-end functionality that clearly satisfies the Assignment 3 rubric.
+
+The website demonstrates:
+- external API integration
+- complex front-end logic
+- state management with persistent preferences
+- basic performance optimization techniques
+- cleaner documentation and code organization
+
+## Implemented Assignment 3 Features
+
+### 1. API Integration
+The website connects to the GitHub API and displays live public repositories from my GitHub account.
+
+Implemented behavior:
+- fetches repository data from GitHub
+- displays repository name, description, language, stars, and last update date
+- handles API failure with a user-friendly error message
+- includes a reload button to refresh the data
+- caches repository data locally for faster repeated page loads
+
+### 2. Complex Logic
+The projects section supports combined logic rather than a single interaction.
+
+Implemented behavior:
+- text search
+- category filter
+- difficulty-level preference
+- sort by newest, oldest, or title
+- empty-state message when no project matches all active conditions
+
+The contact form also uses multi-step validation:
+- checks for empty fields
+- validates name format
+- validates email format
+- checks minimum message length
+- only accepts submission when all rules pass
+
+### 3. State Management
+The website stores multiple UI states in `localStorage` so the experience stays consistent across reloads.
+
+Stored state includes:
+- light/dark theme
+- difficulty preference
+- visitor name
+- simulated login/logout state
+- cached GitHub API data
+
+### 4. Performance Features
+The project includes simple but clear performance improvements:
+- debounced project search to reduce unnecessary filtering work on every keystroke
+- local caching of GitHub repository data to reduce repeated API requests
+- DOM updates grouped with `DocumentFragment`
+- lightweight stack with no front-end framework dependency
+- no unnecessary image-heavy sections
+- reduced-motion support for smoother accessibility and lower animation overhead on compatible devices
+
+## Folder Structure
+```text
+202365030-LoayShqair-assignment3/
+├── README.md
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── script.js
+├── assets/
+│   └── images/
+├── docs/
+│   ├── ai-usage-report.md
+│   └── technical-documentation.md
+├── presentation/
+│   ├── slides.pdf
+│   └── demo-video.mp4
+└── .gitignore
+
+```
+
+## How to Run Locally
+1. Clone or download the repository.
+2. Open the project folder.
+3. Run the project using a local server.
+   - VS Code Live Server is the easiest option.
+   - Or run:
+     ```bash
+     python -m http.server
+     ```
+4. Open the local address shown by the server in your browser.
+5. Test the main features:
+   - theme toggle
+   - visitor name save/clear
+   - simulated login/logout
+   - difficulty selection
+   - project search, filter, and sort
+   - contact form validation
+   - live GitHub repositories section
+
+## Technical Notes
+- Built with plain HTML, CSS, and JavaScript
+- Uses semantic sections and accessible labels
+- Uses `fetch()` for API integration
+- Uses `localStorage` for persistent state
+- Uses modular JavaScript functions for maintainability
+
+## AI Use Summary
+AI tools were used for planning the upgrade, checking requirement coverage, improving JavaScript structure, refining validation logic, and expanding the documentation.
+
+Detailed explanation is provided in:
+- `docs/ai-usage-report.md`
+
+## Optional Deployment
+This site can be deployed with:
+- GitHub Pages
+- Netlify
+- Vercel
+
+## Original Base Repository
+The upgraded version builds on the earlier portfolio project:
+- Assignment 4 repository: `https://github.com/GuidedElectron/202365030-LoayShqair-assignment4`
